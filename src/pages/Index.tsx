@@ -1,16 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Preloader from "@/components/Preloader";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import MarqueeTicker from "@/components/MarqueeTicker";
+import ClientsStrip from "@/components/ClientsStrip";
+import CaseStudies from "@/components/CaseStudies";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import ContactForm from "@/components/ContactForm";
+import CTABanner from "@/components/CTABanner";
+import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
+import useReveal from "@/hooks/useReveal";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useReveal();
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <Preloader />
+      <CustomCursor />
+      <ScrollProgress />
+      <Navbar />
+      <main>
+        <Hero />
+        <MarqueeTicker />
+        <ClientsStrip />
+        <CaseStudies />
+        <Services />
+        <About />
+        <ContactForm />
+        <CTABanner />
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
