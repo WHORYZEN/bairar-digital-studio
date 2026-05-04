@@ -1,4 +1,4 @@
-import portrait from "@/assets/bhaarat-portrait.jpg";
+import portrait from "@/assets/about-visual.jpg";
 
 const skills = [
   { label: "Google Ads", color: "bg-blue" },
@@ -18,13 +18,12 @@ const About = () => (
         <div className="relative rounded-3xl overflow-hidden h-[520px] shadow-2xl border border-border bg-gradient-to-br from-blue-light via-purple-light to-pink-light">
           <img
             src={portrait}
-            alt="Bhaarat Bariar — Performance Marketing Manager"
+            alt="Digital marketing analytics, charts and growth visualization"
             loading="lazy"
             width={1024}
             height={1024}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
         </div>
         <div className="absolute bottom-6 right-6 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float">
           <div className="text-2xl font-bold text-primary">5+</div>
