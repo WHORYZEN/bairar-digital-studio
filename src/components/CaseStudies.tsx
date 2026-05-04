@@ -1,3 +1,5 @@
+import buzzmeehLogo from "@/assets/buzzmeeh.svg";
+
 interface Metric {
   value: string;
   label: string;
