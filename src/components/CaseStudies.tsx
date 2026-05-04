@@ -48,7 +48,6 @@ const caseStudies: CaseStudy[] = [
     colorBg: "bg-brown-light",
     colorText: "text-brown",
     logo: upakarmaLogo,
-    website: "upakarma.com",
   },
   {
     num: "02",
@@ -77,6 +76,7 @@ const caseStudies: CaseStudy[] = [
     company: "Intec Infonet QkrBiz",
     industry: "HR Software · B2B",
     location: "India",
+    website: "www.qkrbiz.com",
     title: "Beating Enterprise Giants — Meta & Google Ads for HR Software",
     paragraphs: [
       "Competed head-to-head with enterprise HR software brands using data-driven Meta and Google Ads strategies. Achieved 40% lower CPA than industry benchmarks.",
@@ -91,12 +91,14 @@ const caseStudies: CaseStudy[] = [
     color: "border-pink",
     colorBg: "bg-pink-light",
     colorText: "text-pink",
+    logo: qkrbizLogo,
   },
   {
     num: "04",
     company: "Accident Centres of Texas",
     industry: "Healthcare · USA",
     location: "Texas, USA",
+    website: "accidentcentersoftexas.com",
     title: "High-Budget Google Ads for Texas #1 Rated Accident Recovery Clinic",
     paragraphs: [
       "Managed $1,000+/day Google Ads budgets for the #1 rated accident recovery clinic in Texas. Navigated highly competitive healthcare keywords with CPCs exceeding $50.",
@@ -108,9 +110,10 @@ const caseStudies: CaseStudy[] = [
       { value: "#1", label: "Rated TX" },
       { value: "200+", label: "Attorney Network" },
     ],
-    color: "border-amber",
-    colorBg: "bg-amber-light",
-    colorText: "text-amber",
+    color: "border-purple",
+    colorBg: "bg-purple-light",
+    colorText: "text-purple",
+    logo: actLogo,
   },
   {
     num: "05",
