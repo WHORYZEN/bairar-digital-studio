@@ -24,6 +24,7 @@ interface CaseStudy {
   colorBg: string;
   colorText: string;
   logo?: string;
+  darkSidebar?: boolean;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -132,10 +133,11 @@ const caseStudies: CaseStudy[] = [
       { value: "6+", label: "Platforms" },
       { value: "TX", label: "Statewide" },
     ],
-    color: "border-amber",
-    colorBg: "bg-amber-light",
+    color: "border-navy",
+    colorBg: "bg-navy-light",
     colorText: "text-amber",
     logo: jourilawLogo,
+    darkSidebar: true,
   },
 ];
 
@@ -158,16 +160,16 @@ const CaseStudies = () => (
                 {cs.logo && (
                   <img src={cs.logo} alt={`${cs.company} logo`} className="h-12 w-auto mb-3 object-contain" />
                 )}
-                <div className="text-xs text-muted-foreground mb-1">{cs.industry}</div>
-                <div className="font-semibold text-foreground text-sm mb-1">{cs.company}</div>
-                <div className="text-xs text-muted-foreground mb-2">{cs.location}</div>
+                <div className={`text-xs mb-1 ${cs.darkSidebar ? "text-white/60" : "text-muted-foreground"}`}>{cs.industry}</div>
+                <div className={`font-semibold text-sm mb-1 ${cs.darkSidebar ? "text-white" : "text-foreground"}`}>{cs.company}</div>
+                <div className={`text-xs mb-2 ${cs.darkSidebar ? "text-white/60" : "text-muted-foreground"}`}>{cs.location}</div>
                 {cs.website && (
-                  <a href={`https://${cs.website}`} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">
+                  <a href={`https://${cs.website}`} target="_blank" rel="noopener noreferrer" className={`text-xs hover:underline ${cs.darkSidebar ? "text-amber" : "text-primary"}`}>
                     {cs.website} ↗
                   </a>
                 )}
               </div>
-              <div className={`text-6xl font-black ${cs.colorText} opacity-10 mt-4`}>{cs.num}</div>
+              <div className={`text-6xl font-black ${cs.colorText} ${cs.darkSidebar ? "opacity-30" : "opacity-10"} mt-4`}>{cs.num}</div>
             </div>
 
             {/* Body */}

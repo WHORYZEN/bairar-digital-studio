@@ -86,6 +86,10 @@ export default {
           DEFAULT: "hsl(var(--brown))",
           light: "hsl(var(--brown-light))",
         },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
