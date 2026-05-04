@@ -1,4 +1,8 @@
 import buzzmeehLogo from "@/assets/buzzmeeh.svg";
+import upakarmaLogo from "@/assets/upakarma.webp";
+import qkrbizLogo from "@/assets/qkrbiz.png";
+import actLogo from "@/assets/act.webp";
+import jourilawLogo from "@/assets/jourilaw.avif";
 
 interface Metric {
   value: string;
@@ -40,9 +44,11 @@ const caseStudies: CaseStudy[] = [
       { value: "3x", label: "ROAS" },
       { value: "360°", label: "Digital + Print" },
     ],
-    color: "border-purple",
-    colorBg: "bg-purple-light",
-    colorText: "text-purple",
+    color: "border-brown",
+    colorBg: "bg-brown-light",
+    colorText: "text-brown",
+    logo: upakarmaLogo,
+    website: "upakarma.com",
   },
   {
     num: "02",
