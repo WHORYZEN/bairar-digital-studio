@@ -78,6 +78,10 @@ export default {
         indigo: {
           DEFAULT: "hsl(var(--indigo))",
         },
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          light: "hsl(var(--red-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
