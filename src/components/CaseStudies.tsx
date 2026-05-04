@@ -61,9 +61,10 @@ const caseStudies: CaseStudy[] = [
       { value: "15+", label: "Brands Ranked" },
       { value: "↑", label: "Profitable Without PPC" },
     ],
-    color: "border-green",
-    colorBg: "bg-green-light",
-    colorText: "text-green",
+    color: "border-red",
+    colorBg: "bg-red-light",
+    colorText: "text-red",
+    logo: buzzmeehLogo,
   },
   {
     num: "03",
