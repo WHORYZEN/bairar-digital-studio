@@ -19,6 +19,7 @@ interface CaseStudy {
   color: string;
   colorBg: string;
   colorText: string;
+  logo?: string;
 }
 
 const caseStudies: CaseStudy[] = [
