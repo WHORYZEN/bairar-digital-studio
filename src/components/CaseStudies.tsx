@@ -1,4 +1,8 @@
 import buzzmeehLogo from "@/assets/buzzmeeh.svg";
+import upakarmaLogo from "@/assets/upakarma.webp";
+import qkrbizLogo from "@/assets/qkrbiz.png";
+import actLogo from "@/assets/act.webp";
+import jourilawLogo from "@/assets/jourilaw.avif";
 
 interface Metric {
   value: string;
@@ -40,9 +44,10 @@ const caseStudies: CaseStudy[] = [
       { value: "3x", label: "ROAS" },
       { value: "360°", label: "Digital + Print" },
     ],
-    color: "border-purple",
-    colorBg: "bg-purple-light",
-    colorText: "text-purple",
+    color: "border-brown",
+    colorBg: "bg-brown-light",
+    colorText: "text-brown",
+    logo: upakarmaLogo,
   },
   {
     num: "02",
@@ -71,6 +76,7 @@ const caseStudies: CaseStudy[] = [
     company: "Intec Infonet QkrBiz",
     industry: "HR Software · B2B",
     location: "India",
+    website: "www.qkrbiz.com",
     title: "Beating Enterprise Giants — Meta & Google Ads for HR Software",
     paragraphs: [
       "Competed head-to-head with enterprise HR software brands using data-driven Meta and Google Ads strategies. Achieved 40% lower CPA than industry benchmarks.",
@@ -85,12 +91,14 @@ const caseStudies: CaseStudy[] = [
     color: "border-pink",
     colorBg: "bg-pink-light",
     colorText: "text-pink",
+    logo: qkrbizLogo,
   },
   {
     num: "04",
     company: "Accident Centres of Texas",
     industry: "Healthcare · USA",
     location: "Texas, USA",
+    website: "accidentcentersoftexas.com",
     title: "High-Budget Google Ads for Texas #1 Rated Accident Recovery Clinic",
     paragraphs: [
       "Managed $1,000+/day Google Ads budgets for the #1 rated accident recovery clinic in Texas. Navigated highly competitive healthcare keywords with CPCs exceeding $50.",
@@ -102,15 +110,17 @@ const caseStudies: CaseStudy[] = [
       { value: "#1", label: "Rated TX" },
       { value: "200+", label: "Attorney Network" },
     ],
-    color: "border-amber",
-    colorBg: "bg-amber-light",
-    colorText: "text-amber",
+    color: "border-purple",
+    colorBg: "bg-purple-light",
+    colorText: "text-purple",
+    logo: actLogo,
   },
   {
     num: "05",
     company: "Jouri Law",
     industry: "Legal · Texas",
     location: "Texas, USA",
+    website: "www.jourilaw.com",
     title: "Full-Funnel Lead Gen for Texas Personal Injury Law Firm — 6 Platforms, $1000 CPC",
     paragraphs: [
       "Built and managed campaigns across 6 platforms including Google, Meta, TikTok, and LSA for a personal injury law firm. Managed CPCs as high as $1000 in the most competitive legal vertical.",
@@ -122,9 +132,10 @@ const caseStudies: CaseStudy[] = [
       { value: "6+", label: "Platforms" },
       { value: "TX", label: "Statewide" },
     ],
-    color: "border-blue",
-    colorBg: "bg-blue-light",
-    colorText: "text-blue",
+    color: "border-amber",
+    colorBg: "bg-amber-light",
+    colorText: "text-amber",
+    logo: jourilawLogo,
   },
 ];
 
@@ -145,7 +156,7 @@ const CaseStudies = () => (
             <div className={`${cs.colorBg} p-5 flex flex-col justify-between`}>
               <div>
                 {cs.logo && (
-                  <img src={cs.logo} alt={`${cs.company} logo`} className="h-8 w-auto mb-3" />
+                  <img src={cs.logo} alt={`${cs.company} logo`} className="h-12 w-auto mb-3 object-contain" />
                 )}
                 <div className="text-xs text-muted-foreground mb-1">{cs.industry}</div>
                 <div className="font-semibold text-foreground text-sm mb-1">{cs.company}</div>
