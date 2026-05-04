@@ -1,3 +1,5 @@
+import portrait from "@/assets/bhaarat-portrait.jpg";
+
 const skills = [
   { label: "Google Ads", color: "bg-blue" },
   { label: "Meta Ads", color: "bg-primary" },
@@ -12,12 +14,23 @@ const About = () => (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       {/* Photo */}
       <div className="hidden lg:block relative reveal">
-        <div className="rounded-3xl overflow-hidden h-[480px] bg-gradient-to-br from-blue-light via-purple-light to-pink-light" />
-        <div className="absolute bottom-4 right-4 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float">
+        <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue/30 via-purple/20 to-pink/30 blur-2xl opacity-60" />
+        <div className="relative rounded-3xl overflow-hidden h-[520px] shadow-2xl border border-border bg-gradient-to-br from-blue-light via-purple-light to-pink-light">
+          <img
+            src={portrait}
+            alt="Bhaarat Bariar — Performance Marketing Manager"
+            loading="lazy"
+            width={1024}
+            height={1024}
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+        </div>
+        <div className="absolute bottom-6 right-6 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float">
           <div className="text-2xl font-bold text-primary">5+</div>
           <div className="text-xs text-muted-foreground">Brands Grown</div>
         </div>
-        <div className="absolute top-4 left-4 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float-delayed">
+        <div className="absolute top-6 left-6 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float-delayed">
           <div className="text-2xl font-bold text-pink">$30K+</div>
           <div className="text-xs text-muted-foreground">Monthly Budget</div>
         </div>
