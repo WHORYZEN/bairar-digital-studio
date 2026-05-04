@@ -156,7 +156,7 @@ const CaseStudies = () => (
             <div className={`${cs.colorBg} p-5 flex flex-col justify-between`}>
               <div>
                 {cs.logo && (
-                  <img src={cs.logo} alt={`${cs.company} logo`} className="h-8 w-auto mb-3" />
+                  <img src={cs.logo} alt={`${cs.company} logo`} className="h-12 w-auto mb-3 object-contain" />
                 )}
                 <div className="text-xs text-muted-foreground mb-1">{cs.industry}</div>
                 <div className="font-semibold text-foreground text-sm mb-1">{cs.company}</div>
