@@ -120,6 +120,7 @@ const caseStudies: CaseStudy[] = [
     company: "Jouri Law",
     industry: "Legal · Texas",
     location: "Texas, USA",
+    website: "www.jourilaw.com",
     title: "Full-Funnel Lead Gen for Texas Personal Injury Law Firm — 6 Platforms, $1000 CPC",
     paragraphs: [
       "Built and managed campaigns across 6 platforms including Google, Meta, TikTok, and LSA for a personal injury law firm. Managed CPCs as high as $1000 in the most competitive legal vertical.",
@@ -131,9 +132,10 @@ const caseStudies: CaseStudy[] = [
       { value: "6+", label: "Platforms" },
       { value: "TX", label: "Statewide" },
     ],
-    color: "border-blue",
-    colorBg: "bg-blue-light",
-    colorText: "text-blue",
+    color: "border-amber",
+    colorBg: "bg-amber-light",
+    colorText: "text-amber",
+    logo: jourilawLogo,
   },
 ];
 
