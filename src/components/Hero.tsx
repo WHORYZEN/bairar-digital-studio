@@ -66,8 +66,8 @@ const Hero = () => {
         <div className="hidden lg:block relative reveal">
           <div className="relative bg-card rounded-3xl shadow-xl overflow-hidden border border-border">
             {/* Gradient bg */}
-            <div className="h-80 bg-gradient-to-br from-purple-light via-blue-light to-pink-light relative">
-              <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-pill bg-card text-green text-xs font-medium shadow-sm">
+            <div className="h-[420px] bg-gradient-to-br from-purple-light via-blue-light to-pink-light relative">
+              <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-pill bg-card text-green text-xs font-medium shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse-dot" />
                 Available Now
               </div>
@@ -75,7 +75,8 @@ const Hero = () => {
                 src={bhaaratHero}
                 alt="Bhaarat Bariar — Performance Marketing Manager"
                 loading="eager"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition: "50% 35%" }}
               />
             </div>
             <div className="p-5">
