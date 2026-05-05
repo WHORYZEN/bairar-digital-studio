@@ -1,3 +1,5 @@
+import bhaaratHero from "@/assets/bhaarat-hero.png";
+
 const stats = [
   { value: "5+", label: "Brands Grown" },
   { value: "$1K+", label: "Daily Budget" },
@@ -69,11 +71,12 @@ const Hero = () => {
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse-dot" />
                 Available Now
               </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/90 flex items-center justify-center text-primary-foreground text-2xl font-bold shadow-lg shadow-primary/30">
-                  BB
-                </div>
-              </div>
+              <img
+                src={bhaaratHero}
+                alt="Bhaarat Bariar — Performance Marketing Manager"
+                loading="eager"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
             </div>
             <div className="p-5">
               <h3 className="text-lg font-semibold text-foreground">Bhaarat Bariar</h3>
