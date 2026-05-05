@@ -26,7 +26,7 @@ const About = () => (
           />
         </div>
         <div className="absolute bottom-6 right-6 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float">
-          <div className="text-2xl font-bold text-primary">5+</div>
+          <div className="text-2xl font-bold text-primary">27+</div>
           <div className="text-xs text-muted-foreground">Brands Grown</div>
         </div>
         <div className="absolute top-6 left-6 bg-card rounded-2xl shadow-lg border border-border px-4 py-3 animate-float-delayed">
