@@ -1,10 +1,10 @@
 import bhaaratHero from "@/assets/bhaarat-hero.png";
 
 const stats = [
-  { value: "5+", label: "Brands Grown" },
+  { value: "27+", label: "Brands Grown" },
   { value: "$1K+", label: "Daily Budget" },
-  { value: "3", label: "Countries" },
-  { value: "4+", label: "Industries" },
+  { value: "7", label: "Countries" },
+  { value: "50+", label: "Industries" },
 ];
 
 const tags = ["Google Ads", "Meta Ads", "SEO", "E-Commerce"];
