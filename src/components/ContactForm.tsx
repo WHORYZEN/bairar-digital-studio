@@ -1,12 +1,11 @@
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const serviceOptions = [
   "Google Ads", "Meta Ads", "SEO", "E-Commerce", "Local SEO",
   "Analytics", "Full Strategy", "Legal Marketing", "Healthcare Marketing",
 ];
-
-const FORMSPREE_URL = ""; // Set your Formspree endpoint here
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -17,6 +16,8 @@ const ContactForm = () => {
     const data = new FormData(form);
     const name = (data.get("name") as string)?.trim();
     const email = (data.get("email") as string)?.trim();
+    const phone = (data.get("phone") as string)?.trim() || null;
+    const service = (data.get("service") as string)?.trim() || null;
     const message = (data.get("message") as string)?.trim();
 
     if (!name || !email || !message) {
@@ -32,32 +33,28 @@ const ContactForm = () => {
       return;
     }
 
-    if (FORMSPREE_URL) {
-      setLoading(true);
-      try {
-        const res = await fetch(FORMSPREE_URL, {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        });
-        if (res.ok) {
-          toast.success("Message sent! I'll respond within 24 hours.");
-          form.reset();
-        } else {
-          toast.error("Failed to send. Please try again.");
-        }
-      } catch {
-        toast.error("Network error. Please try again.");
-      } finally {
-        setLoading(false);
-      }
-    } else {
-      // Fallback mailto
+    setLoading(true);
+    try {
+      const { error } = await supabase
+        .from("contact_submissions")
+        .insert({ name, email, phone, service, message });
+
+      if (error) throw error;
+
+      // Also open user's email client pre-filled to bhaarat070701@gmail.com as a backup
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${data.get("phone") || "N/A"}\nService: ${data.get("service") || "N/A"}\n\n${message}`);
-      window.location.href = `mailto:bhaarat070701@gmail.com?subject=${subject}&body=${body}`;
-      toast.success("Opening your email client...");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\nService: ${service || "N/A"}\n\n${message}`
+      );
+      window.open(`mailto:bhaarat070701@gmail.com?subject=${subject}&body=${body}`, "_blank");
+
+      toast.success("Message saved! Your email client is opening as a backup.");
       form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to send. Please try again or WhatsApp directly.");
+    } finally {
+      setLoading(false);
     }
   };
 
