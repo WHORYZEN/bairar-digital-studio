@@ -21,9 +21,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-6">
-            Performance /{" "}
-            <span className="text-primary">Marketing</span> /{" "}
-            Manager.
+            Performance <span className="text-primary">Marketing</span> Manager.
           </h1>
 
           <p className="text-muted-foreground text-lg mb-8 max-w-lg">
