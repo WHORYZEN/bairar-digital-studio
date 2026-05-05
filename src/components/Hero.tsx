@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         {/* Right — Profile card */}
-        <div className="hidden lg:block relative reveal">
+        <div className="relative reveal order-first lg:order-last mb-8 lg:mb-0">
           <div className="relative bg-card rounded-3xl shadow-xl overflow-hidden border border-border">
             {/* Gradient bg */}
             <div className="h-[420px] bg-gradient-to-br from-purple-light via-blue-light to-pink-light relative">
