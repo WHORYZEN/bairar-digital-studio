@@ -66,7 +66,7 @@ const Hero = () => {
         <div className="hidden lg:block relative reveal">
           <div className="relative bg-card rounded-3xl shadow-xl overflow-hidden border border-border">
             {/* Gradient bg */}
-            <div className="h-56 bg-gradient-to-br from-purple-light via-blue-light to-pink-light relative">
+            <div className="h-80 bg-gradient-to-br from-purple-light via-blue-light to-pink-light relative">
               <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-pill bg-card text-green text-xs font-medium shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse-dot" />
                 Available Now
