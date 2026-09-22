@@ -93,7 +93,7 @@ const Hero = () => {
           {/* Floating cards */}
           <div className="absolute -top-4 -right-4 bg-card rounded-2xl shadow-lg border border-border p-4 max-w-[200px] animate-float">
             <div className="text-xs text-muted-foreground mb-1">Monthly Budget</div>
-            <div className="text-lg font-bold text-foreground">$30,000+</div>
+            <div className="text-lg font-bold text-foreground">$1,000,000+</div>
             <div className="text-xs text-muted-foreground">Managed across clients</div>
           </div>
 
